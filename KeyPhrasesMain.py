@@ -10,12 +10,6 @@ from multiprocessing.dummy import Pool as ThreadPool
 pool = ThreadPool(4)
 
 
-
-
-
-
-
-
 if __name__ == "__main__":
 
     documents = np.array(filter.get_filter_doc())
