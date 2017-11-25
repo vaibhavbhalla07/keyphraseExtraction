@@ -1,0 +1,1 @@
+ramerdouglaspeucker algorithm also known douglaspeucker algorithm iterative end point fit algorithm takes curve composed line segments finds similar curve fewer points

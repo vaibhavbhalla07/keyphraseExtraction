@@ -1,0 +1,1 @@
+depth first search dfs algorithm traversing searching tree graph data structures one starts root selecting arbitrary node root case graph explores far possible along branch backtracking version depth first search investigated th century french mathematician charles pierre trmaux strategy solving mazes

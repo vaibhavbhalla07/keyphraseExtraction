@@ -1,0 +1,1 @@
+xml transformation language programming language designed specifically transform input xml document output document satisfies specific goal two special cases transformation xml xml output document xml document xml data output document byte stream

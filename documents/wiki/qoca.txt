@@ -1,0 +1,1 @@
+qoca gpl library incrementally solving systems linear equations various goal functions contains robust implementation cassowary popular linear programming algorithm handling manhattan goal functions used several free software projects maintained monash university available c java version provides language bindings python perl

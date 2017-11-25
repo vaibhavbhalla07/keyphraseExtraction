@@ -1,0 +1,1 @@
+openmath name markup language specifying meaning mathematical formulae among things used complement mathml standard mainly focuses presentation formulae information semantic meaning openmath encoded xml binary format

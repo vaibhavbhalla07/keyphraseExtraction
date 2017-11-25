@@ -1,0 +1,1 @@
+mathematics specifically numerical linear algebra biconjugate gradient method algorithm solve systems linear equations x b displaystyle ax b unlike conjugate gradient method algorithm require matrix displaystyle self adjoint instead one needs perform multiplications conjugate transpose

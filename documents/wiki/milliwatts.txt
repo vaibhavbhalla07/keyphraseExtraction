@@ -1,0 +1,1 @@
+watt symbol w derived unit power international system units si defined joule per second used quantify rate energy transfer power dimensions m l { displaystyle { mathsf {ml}} { }{ mathsf {t}} { }}

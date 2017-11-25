@@ -1,0 +1,1 @@
+mathematics specifically linear algebra functional analysis kernel also known null space nullspace linear map l v w two vector spaces v w set elements v v l v denotes zero vector w set builder notation ker l { v v | l v } { displaystyle ker l left { mathbf {v} v|l mathbf {v} mathbf { } right }{ text{ }}}

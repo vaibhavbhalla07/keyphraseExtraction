@@ -1,0 +1,1 @@
+mathematics specifically real analysis bolzanoweierstrass theorem named bernard bolzano karl weierstrass fundamental result convergence finite dimensional euclidean space rn theorem states bounded sequence rn convergent subsequence equivalent formulation subset rn sequentially compact closed bounded theorem sometimes called sequential compactness theorem

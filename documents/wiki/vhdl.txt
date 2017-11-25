@@ -1,0 +1,1 @@
+vhdl vhsic hardware description language hardware description language used electronic design automation describe digital mixed signal systems field programmable gate arrays integrated circuits vhdl also used general purpose parallel programming language

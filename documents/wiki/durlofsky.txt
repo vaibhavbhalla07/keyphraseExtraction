@@ -1,0 +1,1 @@
+fluid dynamics faxn laws relate sphere velocity u displaystyle mathbf u angular velocity displaystyle mathbf omega forces torque stresslet flow experiences low reynolds number creeping flow conditions

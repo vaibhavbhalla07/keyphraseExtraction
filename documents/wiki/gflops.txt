@@ -1,0 +1,1 @@
+computing floating point operations per second flops measure computer performance useful fields scientific computations require floating point calculations cases accurate measure measuring instructions per second similar term flop often used floating point operation example unit counting floating point operations carried algorithm computer hardware

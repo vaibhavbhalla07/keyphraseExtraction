@@ -1,0 +1,1 @@
+common object file format coff format executable object code shared library computer files used unix systems introduced unix system v replaced previously used format formed basis extended specifications xcoff ecoff largely replaced elf introduced svr coff variants continue used unix like systems microsoft windows efi environments embedded development systems

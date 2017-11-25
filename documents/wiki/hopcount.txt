@@ -1,0 +1,1 @@
+computer networking hop one portion path source destination data packets pass bridges routers gateways travel source destination time packets passed next network device hop occurs hop count refers number intermediate devices data must pass source destination since store forward latencies incurred hop large number hops source destination implies lower real time performance

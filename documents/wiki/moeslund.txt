@@ -1,0 +1,1 @@
+canny edge detector edge detection operator uses multi stage algorithm detect wide range edges images developed john f canny canny also produced computational theory edge detection explaining technique works

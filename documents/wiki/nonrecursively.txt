@@ -1,0 +1,1 @@
+non recursive filter uses input values like x n unlike recursive filter uses previous output values like y n non recursive digital filters often known finite impulse response fir filters non recursive digital filter finite number coefficients impulse response h n non recursive filter example y n x n x n recursive filter example y n y n x n

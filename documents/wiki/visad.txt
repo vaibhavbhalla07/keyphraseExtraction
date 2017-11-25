@@ -1,0 +1,1 @@
+visad java component library interactive collaborative visualization analysis numerical data combines flexible data model distributed objects via java rmi support sharing data visualizations user interfaces different data sources different computers different scientific disciplines licensed gnu lgpl visad basis integrated data viewer mcidas v systems

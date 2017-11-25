@@ -1,0 +1,1 @@
+linear algebra order r krylov subspace generated n n matrix vector b dimension n linear subspace spanned images b first r powers starting displaystyle k r b span b b b r b displaystyle mathcal k r b operatorname span b ab b ldots r b

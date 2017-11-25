@@ -1,0 +1,1 @@
+proportional share scheduling type scheduling preallocates certain amount cpu time processes proportional share algorithm every job weight jobs receive share available resources proportional weight every job

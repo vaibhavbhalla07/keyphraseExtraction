@@ -1,0 +1,1 @@
+linguistics hyponym greek hup noma name word phrase whose semantic field included within another word hyperonym hypernym greek hupr noma name simpler terms hyponym shares type relationship hypernym example pigeon crow eagle seagull hyponyms bird hyperonym turn hyponym animal

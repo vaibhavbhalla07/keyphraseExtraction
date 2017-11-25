@@ -1,0 +1,1 @@
+class based programming downcasting type refinement act casting reference base class one derived classes many programming languages possible check type introspection determine whether type referenced object indeed one cast derived type thus issue error case words variable base class parent class value derived class child class downcasting possible

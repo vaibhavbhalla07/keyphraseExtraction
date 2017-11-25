@@ -1,0 +1,1 @@
+fc standard program unix lists edits reexecutes commands previously entered interactive shell fc builtin command bash shell

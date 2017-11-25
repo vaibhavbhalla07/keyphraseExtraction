@@ -1,0 +1,1 @@
+tsung formerly known idx tsunami stress testing tool written erlang language distributed gpl license currently stress test http webdav ldap mysql postgresql soap xmpp servers tsung simulate hundreds simultaneous users single system also function clustered environment

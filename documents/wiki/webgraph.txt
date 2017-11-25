@@ -1,0 +1,1 @@
+webgraph describes directed links pages world wide web graph general consists several vertices pairs connected edges directed graph edges directed lines arcs webgraph directed graph whose vertices correspond pages www directed edge connects page x page y exists hyperlink page x referring page y

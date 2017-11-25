@@ -1,0 +1,1 @@
+computer science tree traversal also known tree search form graph traversal refers process visiting checking updating node tree data structure exactly traversals classified order nodes visited following algorithms described binary tree may generalized trees well

@@ -1,0 +1,1 @@
+xml key management specification xkms uses web services framework make easier developers secure inter application communication using public key infrastructure pki xml key management specification protocol developed w c describes distribution registration public keys services access xkms compliant server order receive updated key information encryption authentication

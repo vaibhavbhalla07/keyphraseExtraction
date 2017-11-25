@@ -1,0 +1,1 @@
+openhmpp hmpp hybrid multicore parallel programming programming standard heterogeneous computing based set compiler directives standard programming model designed handle hardware accelerators without complexity associated gpu programming approach based directives implemented enable loose relationship application code use hardware accelerator hwa

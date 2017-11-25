@@ -1,0 +1,1 @@
+computer programming xor swap algorithm uses xor bitwise operation swap values distinct variables data type without using temporary variable distinct means variables stored different memory addresses actual values variables different
