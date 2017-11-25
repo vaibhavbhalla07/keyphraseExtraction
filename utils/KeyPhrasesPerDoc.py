@@ -1,5 +1,5 @@
 import numpy as np
-import DistanceMeasures as dm
+import distance_measures as dm
 import utils.TFIDF as tfidf
 from collections import Counter
 from utils import ClusteringMethods as clusters

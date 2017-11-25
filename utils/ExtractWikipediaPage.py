@@ -5,7 +5,7 @@ import ReadFilterData as filter
 words = []
 word_wiki_dict = {}
 wiki_path="documents/wiki/"
-count=0
+
 
 def get_wikipedia_content(title):
     resp = requests.get(
@@ -15,19 +15,18 @@ def get_wikipedia_content(title):
     return json
 
 
-def get_wiki_pages(word):
-    global count
+def get_wiki_pages(unique_words):
+    count=0
     wiki_files = os.listdir(wiki_path)
-    word_file = word+".txt"
-    if word_file not in wiki_files:
-        get_wiki(word)
-        count += 1
-        print count
+    for w in unique_words:
+        word_file = w+".txt"
+        if word_file in wiki_files:
+        #     get_wiki(w)
         # else:
-        #     with open(wiki_path + word_file) as wf:
-        #         word_wiki_dict[w] = wf.read()
-    unk = ", ".join(words)
-    write_unk_wiki_words(unk)
+            with open(wiki_path + word_file) as wf:
+                word_wiki_dict[w] = wf.read()
+    # unk = ", ".join(words)
+    # write_unk_wiki_words(unk)
     return word_wiki_dict
 
 
