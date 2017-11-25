@@ -37,7 +37,17 @@ def get_wiki(title):
         doc = filter.remove_stopwords(doc)
         word_wiki_dict[doc] = len(word_wiki_dict)
         write_file(word_wiki_dict[title], title)
-    except:
+    except wikipedia.exceptions.DisambiguationError as e:
+        try:
+            #taking the first option as word
+            doc=wikipedia.page(e.options[0]).summary.encode('ascii','ignore').lower()
+            doc = filter.remove_special_chars(doc)
+            doc = filter.remove_stopwords(doc)
+            word_wiki_dict[doc] = len(word_wiki_dict)
+            write_file(word_wiki_dict[title], title)
+        except BaseException as ex:
+            words.append(title)
+    except BaseException as ex:
         words.append(title)
 
 
