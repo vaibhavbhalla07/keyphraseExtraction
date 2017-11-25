@@ -6,6 +6,9 @@ import numpy as np
 import utils.KeyPhrasesPerDoc as kp
 from utils import CreateDictionaries as cd
 from utils import ClusteringMethods as clusters
+from multiprocessing.dummy import Pool as ThreadPool
+pool = ThreadPool(4)
+
 
 
 
@@ -17,7 +20,9 @@ if __name__ == "__main__":
 
     documents = np.array(filter.get_filter_doc())
     vocabulary,unique_words = vocab.create_vocab_dictionary(documents)
-    word_wiki = wiki.get_wiki_pages(unique_words)
+    word_wiki = pool.map(wiki.get_wiki_pages, unique_words)
+    pool.close()
+    pool.join()
     wiki_doc = " ".join(list(word_wiki.values()))
     doc_dictionary = cd.getCountDictFromDoc(wiki_doc)
     bigram_dict = cd.getBigramCounts(wiki_doc)

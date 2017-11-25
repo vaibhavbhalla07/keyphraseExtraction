@@ -5,7 +5,7 @@ import ReadFilterData as filter
 words = []
 word_wiki_dict = {}
 wiki_path="documents/wiki/"
-
+count=0
 
 def get_wikipedia_content(title):
     resp = requests.get(
@@ -15,18 +15,19 @@ def get_wikipedia_content(title):
     return json
 
 
-def get_wiki_pages(unique_words):
-    count=0
+def get_wiki_pages(word):
+    global count
     wiki_files = os.listdir(wiki_path)
-    for w in unique_words:
-        word_file = w+".txt"
-        if word_file in wiki_files:
-        #     get_wiki(w)
-        # else:
-            with open(wiki_path + word_file) as wf:
-                word_wiki_dict[w] = wf.read()
-    # unk = ", ".join(words)
-    # write_unk_wiki_words(unk)
+    word_file = word+".txt"
+    if word_file not in wiki_files:
+        get_wiki(word)
+        count += 1
+        print count
+    else:
+        with open(wiki_path + word_file) as wf:
+            word_wiki_dict[word] = wf.read()
+    unk = ", ".join(words)
+    write_unk_wiki_words(unk)
     return word_wiki_dict
 
 
@@ -37,7 +38,17 @@ def get_wiki(title):
         doc = filter.remove_stopwords(doc)
         word_wiki_dict[doc] = len(word_wiki_dict)
         write_file(word_wiki_dict[title], title)
-    except:
+    except wikipedia.exceptions.DisambiguationError as e:
+        try:
+            #taking the first option as word
+            doc=wikipedia.page(e.options[0]).summary.encode('ascii','ignore').lower()
+            doc = filter.remove_special_chars(doc)
+            doc = filter.remove_stopwords(doc)
+            word_wiki_dict[doc] = len(word_wiki_dict)
+            write_file(word_wiki_dict[title], title)
+        except BaseException as ex:
+            words.append(title)
+    except BaseException as ex:
         words.append(title)
 
 
