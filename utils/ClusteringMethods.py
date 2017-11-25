@@ -10,7 +10,8 @@ def hierarchial_cluster(X,no_clusters):
 
 
 def spectral_cluster(X,no_clusters):
-    spectralCluster = cluster.SpectralClustering(n_clusters = no_clusters, affinity = 'precomputed').fit(X)
+    spectralCluster = cluster.SpectralClustering(n_clusters = no_clusters, affinity = 'precomputed')
+    spectralCluster.fit_predict(X)
     spectral_label = spectralCluster.labels_
     return spectral_label
 

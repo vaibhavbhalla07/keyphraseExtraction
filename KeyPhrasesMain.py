@@ -8,6 +8,11 @@ from utils import CreateDictionaries as cd
 from utils import ClusteringMethods as clusters
 
 
+
+
+
+
+
 if __name__ == "__main__":
 
     documents = np.array(filter.get_filter_doc())
@@ -19,10 +24,13 @@ if __name__ == "__main__":
     tfidf_matrix = tfidf.getTFIDFmatrix(unique_words,word_wiki)
     for doc in documents:
         cosine_sim_matrix,euclidean_dist_matrix,pmi_c_matrix = kp.createSimilarityMatrices(doc,vocabulary,word_wiki,tfidf_matrix,doc_dictionary,bigram_dict)
-        labels_cos,dict_cos = clusters.createClusters(cosine_sim_matrix,unique_words,10,"affinity")
+        labels_cos,dict_cos = clusters.createClusters(cosine_sim_matrix,unique_words,10,"spectral")
+        labels_euc,dict_euc = clusters.createClusters(euclidean_dist_matrix,unique_words,10,"spectral")
+        labels_pmi,dict_pmi = clusters.createClusters(pmi_c_matrix,unique_words,10,"spectral")
 
-        labels_euc,dict_euc = clusters.createClusters(euclidean_dist_matrix,unique_words,10,"affinity")
-        labels_pmi,dict_pmi = clusters.createClusters(pmi_c_matrix,unique_words,10,"affinity")
+        labels_cos,centers,dict_cos = clusters.createClusters(cosine_sim_matrix,unique_words,10,"affinity")
+        print "end"
+
 
 
 
