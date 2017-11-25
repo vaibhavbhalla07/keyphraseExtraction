@@ -3,7 +3,7 @@ import re
 
 regex = "[~`\,\[\]\(\)\";\{\}:<>?\\\\\/$#@=!^%&*\'\d\.\-_]"
 stopwords_path = "documents/stopwords.txt"
-documents_path = "documents/input/"
+documents_path = "documents/input_test/"
 output_path = "documents/output/"
 stopwords = open(stopwords_path).read().lower().split(",")
 
@@ -28,7 +28,6 @@ def remove_special_chars(doc):
 
 
 def get_filter_doc():
-
     docs = read_documents(documents_path)
     docs = [remove_special_chars(doc) for doc in docs]
     docs = [remove_stopwords(doc) for doc in docs]
