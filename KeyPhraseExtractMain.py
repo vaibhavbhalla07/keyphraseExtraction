@@ -20,5 +20,5 @@ if __name__ == "__main__":
         for j,word in enumerate(unique_words):
             tfidf_matrix[j][i] = tfidf.tf_idf(word,word_wiki[doc],list(word_wiki.values()))
     for doc in documents:
-        kp.createKeyPhrasesFromDoc(doc,word_wiki,vocabulary,tfidf_matrix)
-    print("end")
+        # kp.createKeyPhrasesFromDoc(doc,word_wiki,vocabulary,tfidf_matrix)
+        print(doc)
