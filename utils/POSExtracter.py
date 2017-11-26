@@ -13,14 +13,14 @@ def extractPOS(docs):
     for doc in docs:
         pos_doc.append(nltk.pos_tag(word_tokenize(doc)))
         print("keyphrases are")
-        for phrase in extract_keyphrases(pos_doc):
+        for phrase in extract_keyphrases(pos_doc).values():
             print phrase
     return pos_doc
 
 
 def extract_keyphrases(pos_doc):
     total_docs_key_phrases = {}
-    for doc in pos_doc:
+    for i,doc in enumerate(pos_doc):
         pos = []
         word = []
         key_phrases_doc=[]
@@ -33,7 +33,7 @@ def extract_keyphrases(pos_doc):
         iterator = p.finditer(pos_string)
         for each_match in iterator:
             key_phrases_doc.append(extract_words(each_match.span()[0],each_match.span()[1],word_string))
-        total_docs_key_phrases[doc]=key_phrases_doc
+        total_docs_key_phrases[i]=key_phrases_doc
         return total_docs_key_phrases
 
 def extract_words(from_index,to_index,doc):
