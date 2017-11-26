@@ -1,3 +1,4 @@
+from multiprocessing.dummy import Pool as ThreadPool
 import requests
 import os
 import wikipedia
@@ -29,6 +30,19 @@ def get_wiki_pages(word):
     unk = ", ".join(words)
     write_unk_wiki_words(unk)
 
+
+def getAllWikiPages():
+    pool = ThreadPool(4)
+    wiki_files = os.listdir(wiki_path)
+    pool.map(getWikiFile,wiki_files)
+    pool.close()
+    pool.join()
+    return word_wiki_dict
+
+
+def getWikiFile(word_file):
+    with open(wiki_path + word_file) as wf:
+        word_wiki_dict[word_file] = wf.read()
 
 
 def get_wiki(title):

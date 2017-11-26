@@ -1,11 +1,10 @@
 
 
-def create_vocab_dictionary(documents):
+def create_vocab_dictionary(doc):
     vocabulary={}
-    for doc in documents:
-        words = list(set(doc.split()))
-        for w in words:
-            if w not in vocabulary:
-                vocabulary[w] = len(vocabulary)
+    words = list(set(doc.split()))
+    for w in words:
+        if w not in vocabulary:
+            vocabulary[w] = len(vocabulary)
     unique_words = list(vocabulary.keys())
     return vocabulary, unique_words

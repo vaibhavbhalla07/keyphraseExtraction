@@ -21,13 +21,13 @@ def getDistanceMeasuresForWordVector(word, vocabulary,word_wiki, tfidf_matrix,do
     return cosine_similarity,euclidean_dist,pmi_c
 
 
-def createSimilarityMatrices(doc,vocabulary, word_wiki,tfidf_matrix,doc_dictionary,bigram_dict):
+def createSimilarityMatrices(doc,vocabulary, word_wiki,tfidf_dict,doc_dictionary,bigram_dict):
     unique_words = np.array(list(set(doc.split())))
     cosine_sim_matrix = np.zeros(shape=(len(unique_words),len(unique_words)))
     pmi_c_matrix = np.zeros(shape=(len(unique_words),len(unique_words)))
     euclidean_dist_matrix = np.zeros(shape=(len(unique_words),len(unique_words)))
     for word in vocabulary:
-        cosine_sim_matrix[vocabulary[word]],euclidean_dist_matrix[vocabulary[word]],pmi_c_matrix[vocabulary[word]] = getDistanceMeasuresForWordVector(word, vocabulary,word_wiki, tfidf_matrix,doc_dictionary,bigram_dict)
+        cosine_sim_matrix[vocabulary[word]],euclidean_dist_matrix[vocabulary[word]],pmi_c_matrix[vocabulary[word]] = getDistanceMeasuresForWordVector(word, vocabulary,word_wiki, tfidf_dict,doc_dictionary,bigram_dict)
 
     return cosine_sim_matrix,euclidean_dist_matrix,pmi_c_matrix
 
