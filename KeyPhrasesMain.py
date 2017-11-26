@@ -6,6 +6,7 @@ import numpy as np
 import utils.KeyPhrasesPerDoc as kp
 from utils import CreateDictionaries as cd
 from utils import ClusteringMethods as clusters
+from utils import POSExtracter
 
 # pool = ThreadPool(4)
 import collections
@@ -34,6 +35,12 @@ if __name__ == "__main__":
 
         labels_euc,centers_euc,dict_euc = clusters.createClusters(euclidean_dist_matrix,unique_words,10,"affinity")
         labels_pmi, centers_pmi, dict_pmi = clusters.createClusters(pmi_c_matrix, unique_words, 10, "affinity")
+        pos_doc=POSExtracter.extractPOS(doc)
+        key_phrases=POSExtracter.extract_keyphrases(pos_doc)
+        final_keyphrase_euc=POSExtracter.extract_matching_keyphrase(centers_euc,key_phrases)
+        final_keyphrase_pmi = POSExtracter.extract_matching_keyphrase(centers_euc, key_phrases)
+        POSExtracter.displayKeyPhrases(final_keyphrase_euc,"euc")
+        POSExtracter.displayKeyPhrases(final_keyphrase_pmi, "pmi")
         print "end"
 
 
