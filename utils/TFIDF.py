@@ -26,9 +26,9 @@ def tf_idf(word, document, document_list):
 
 def getTFIDFmatrix(unique_words,word_wiki):
     tfidf_matrix = np.zeros(shape=(len(unique_words), len(word_wiki)))
-    wiki_docs = list(word_wiki.values())
+    wiki_docs = list(word_wiki.keys())
     for i, doc_idx in enumerate(word_wiki):
         for j, word in enumerate(unique_words):
-            val = tf_idf(word, word_wiki[doc_idx],wiki_docs)
+            val = tf_idf(word, doc_idx,wiki_docs)
             tfidf_matrix[j][i] = val
     return tfidf_matrix

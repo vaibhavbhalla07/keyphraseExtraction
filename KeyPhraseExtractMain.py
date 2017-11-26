@@ -12,7 +12,7 @@ if __name__ == "__main__":
     documents = np.array(filter.get_filter_doc())
     vocabulary,unique_words = vocab.create_vocab_dictionary(documents)
     pool = ThreadPool(4)
-    word_wiki = pool.map(wiki.get_wiki_pages, unique_words[3585:])
+    word_wiki = pool.map(wiki.get_wiki_pages, unique_words)
     pool.close()
     pool.join()
     tfidf_matrix = np.zeros(shape=(len(vocabulary),len(word_wiki)))
