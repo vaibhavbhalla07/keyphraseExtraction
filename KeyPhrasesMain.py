@@ -11,12 +11,6 @@ pool = ThreadPool(4)
 import collections
 
 
-
-
-
-
-
-
 if __name__ == "__main__":
 
     documents = np.array(filter.get_filter_doc())
