@@ -3,7 +3,7 @@ import re
 
 regex = "[~`\,\[\]\(\)\";\{\}:<>?\\\\\/$#@=!^%&*\'\d\.\-_]"
 stopwords_path = "documents/stopwords.txt"
-documents_path = "documents/input_test/"
+documents_path = "documents/input/"
 output_path = "documents/output/"
 stopwords = open(stopwords_path).read().lower().split(",")
 

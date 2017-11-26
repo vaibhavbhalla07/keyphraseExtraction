@@ -1,6 +1,6 @@
 from sklearn import cluster
 from utils import CreateDictionaries as cdict
-import numpy as np
+from sklearn import metrics
 
 
 def hierarchial_cluster(X,no_clusters):
@@ -17,7 +17,7 @@ def spectral_cluster(X,no_clusters):
 
 
 def affinity_propagation(X):
-    af = cluster.AffinityPropagation(preference=-50,affinity = 'precomputed')
+    af = cluster.AffinityPropagation(affinity = 'precomputed')
     af.fit_predict(X)
     cluster_centers_indices = af.cluster_centers_indices_
     labels = af.labels_
