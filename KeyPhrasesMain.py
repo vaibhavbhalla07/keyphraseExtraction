@@ -37,8 +37,8 @@ if __name__ == "__main__":
         labels_pmi, centers_pmi, dict_pmi = clusters.createClusters(pmi_c_matrix, unique_words, 10, "affinity")
         pos_doc=POSExtracter.extractPOS(doc)
         key_phrases=POSExtracter.extract_keyphrases(pos_doc)
-        final_keyphrase_euc=POSExtracter.extract_matching_keyphrase(centers_euc,key_phrases)
-        final_keyphrase_pmi = POSExtracter.extract_matching_keyphrase(centers_euc, key_phrases)
+        final_keyphrase_euc=POSExtracter.extract_matching_keyphrase(centers_euc,key_phrases,unique_words)
+        final_keyphrase_pmi = POSExtracter.extract_matching_keyphrase(centers_euc, key_phrases,unique_words)
         POSExtracter.displayKeyPhrases(final_keyphrase_euc,"euc")
         POSExtracter.displayKeyPhrases(final_keyphrase_pmi, "pmi")
         print "end"

@@ -52,11 +52,11 @@ def extract_words(from_index,to_index,doc):
     return " ".join(word_tokenize(doc)[from_index:to_index])
 
 
-def extract_matching_keyphrase(centers,keyphrases):
+def extract_matching_keyphrase(centers,keyphrases,unique_words):
     final_key_phrases=[]
     for keyphrase in keyphrases:
         for center in centers:
-            if keyphrase.split(" ") in center.split(" "):
+            if unique_words[center] in keyphrase.split():
                 final_key_phrases.append(keyphrase)
     return final_key_phrases
 
