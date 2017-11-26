@@ -54,9 +54,9 @@ def extract_words(from_index,to_index,doc):
 
 def extract_matching_keyphrase(centers,keyphrases,unique_words):
     final_key_phrases=[]
+    center_words = [unique_words[center] for center in centers]
     for keyphrase in keyphrases:
-        for center in centers:
-            if unique_words[center] in keyphrase.split():
+            if keyphrase.split() in center_words:
                 final_key_phrases.append(keyphrase)
     return final_key_phrases
 
