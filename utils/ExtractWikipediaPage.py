@@ -25,10 +25,10 @@ def get_wiki_pages(word):
         print count
     else:
         with open(wiki_path + word_file) as wf:
-            word_wiki_dict[wf.read()] = len(word_wiki_dict)
+            word_wiki_dict[word] = wf.read()
     unk = ", ".join(words)
     write_unk_wiki_words(unk)
-    return word_wiki_dict
+
 
 
 def get_wiki(title):
@@ -36,16 +36,16 @@ def get_wiki(title):
         doc = wikipedia.page(title=title).summary.encode('ascii','ignore').lower()
         doc = filter.remove_special_chars(doc)
         doc = filter.remove_stopwords(doc)
-        word_wiki_dict[doc] = len(word_wiki_dict)
-        write_file(doc, title)
+        word_wiki_dict[title] = doc
+        write_file(word_wiki_dict[title], title)
     except wikipedia.exceptions.DisambiguationError as e:
         try:
             #taking the first option as word
             doc=wikipedia.page(e.options[0]).summary.encode('ascii','ignore').lower()
             doc = filter.remove_special_chars(doc)
             doc = filter.remove_stopwords(doc)
-            word_wiki_dict[doc] = len(word_wiki_dict)
-            write_file(doc, title)
+            word_wiki_dict[title] = doc
+            write_file(word_wiki_dict[title], title)
         except BaseException as ex:
             words.append(title)
     except BaseException as ex:
